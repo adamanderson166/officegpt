@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OfficeGPT</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="logo">OfficeGPT</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to OfficeGPT</h1>
+        <iframe src="https://inworld.ai/arcade/zaLMyeInFZ6oYTym" width="840" height="560" frameborder="0" allowfullscreen></iframe>
+        <p>Select a business professional to chat with:</p>
+        <div id="professionals">
+            <button onclick="selectProfessional('marketer')">Marketer</button>
+            <button onclick="selectProfessional('accountant')">Accountant</button>
+            <button onclick="selectProfessional('lawyer')">Lawyer</button>
+            <button onclick="selectProfessional('hr-specialist')">HR Specialist</button>
+            <button onclick="selectProfessional('it-specialist')">IT Specialist</button>
+        </div>
+        <div id="chat" style="display:none;">        
+            <h2>Chat with <span id="selected-professional"></span></h2>
+            <div id="conversation"></div>
+            <form id="chat-form" onsubmit="submitMessage(); return false;">
+                <input id="user-input" type="text" placeholder="Type your message...">
+                <button type="submit">Send</button>
+            </form>
+            <button id="back-button" onclick="goBack()">Back</button>
+            <div id="drop-zone" ondragover="handleDragOver(event)" ondrop="handleFileDrop(event)">
+                <p>Drag and drop files here or click to upload</p>
+                <input type="file" id="file-input" onchange="handleFileSelect(event)" style="display:none;">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h2>About OfficeGPT</h2>
+                <p>OfficeGPT is an innovative platform connecting users with AI-powered business professionals to assist with their business needs.</p>
+            </div>
+            <div class="footer-section links">
+                <h2>Quick Links</h2>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section contact">
+                <h2>Contact Us</h2>
+                <p>Email: support@officegpt.com</p>
+                <p>Phone: +1 (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 OfficeGPT. All rights reserved.
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
+
